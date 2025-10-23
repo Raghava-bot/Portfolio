@@ -2,6 +2,7 @@ import React from 'react'
 import ProjectCard from '../components/ProjectCard'
 import projects from '../data/projects'
 import  styles from'../styles/home.module.css'
+import hero from '../assets/hero.jpg';
 
 
 export default function Home(){
@@ -12,7 +13,7 @@ return (
 <h2>Hi, I'm Raghava.</h2>
 <p>Frontend engineer & ML enthusiast building fast, accessible web experiences.</p>
 </div>
-<img src="/src/assets/hero.jpg" alt="hero" className={styles.heroImg} />
+<img src={hero} alt="hero" className={styles.heroImg} />
 </div>
 
 
