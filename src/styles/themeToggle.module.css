@@ -1,0 +1,19 @@
+.toggle {
+  cursor: pointer;
+  border: none;
+  background: var(--surface);
+  color: var(--accent);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.toggle:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: rotate(10deg);
+}

@@ -1,0 +1,55 @@
+/* Root site layout */
+.siteRoot {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+
+/* Skip to content link for accessibility */
+.skip {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.skip:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Footer styles */
+footer {
+  background-color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+  transition: background-color 0.3s;
+}
+
+body.dark footer {
+  background-color: #1e1e1e;
+}
+
+/* Suspense loader */
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main {
+    padding: 1.5rem 1rem;
+  }
+}

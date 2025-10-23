@@ -1,0 +1,134 @@
+/* === General Layout === */
+.Container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  transition: color 0.3s, background 0.3s;
+}
+
+/* === Hero Section === */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.hero div {
+  flex: 1;
+  min-width: 280px;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  color: #0070f3;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #444;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.heroImg {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0070f3;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeInRight 1s ease-in-out;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.heroImg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 112, 243, 0.4);
+}
+
+/* === Section Heading === */
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #0070f3;
+  position: relative;
+}
+
+h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 50px;
+  height: 3px;
+  background: #0070f3;
+  border-radius: 5px;
+}
+
+/* === Projects Grid === */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* === Animations === */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Dark Mode === */
+body.dark .Container {
+  background: #121212;
+  color: #ddd;
+}
+
+body.dark .hero h2 {
+  color: #4da3ff;
+}
+
+body.dark .heroImg {
+  border-color: #4da3ff;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+
+  .heroImg {
+    width: 220px;
+    height: 220px;
+  }
+}
